@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
+  "name": "contact-app",
+  "description": "simple contact app built using electron, typescrip, nextjs",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "Rijal Ghodi <rijalghodi10@gmail.com>",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
