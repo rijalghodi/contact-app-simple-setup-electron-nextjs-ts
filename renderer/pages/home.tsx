@@ -1,30 +1,24 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 function Home() {
   return (
     <React.Fragment>
       <Head>
-        <title>Home - Nextron (with-javascript)</title>
+        <title>Home</title>
       </Head>
       <div>
         <p>
-          ⚡ Electron + Next.js ⚡ -
-          <Link href="/next">
-            <a>Go to next page</a>
+          ⚡ Home ⚡ -
+          <Link href="/">
+            <a>Go to Contact Page</a>
           </Link>
         </p>
-        <Image
-          src="/images/logo.png"
-          alt="Logo image"
-          width="256px"
-          height="256px"
-        />
       </div>
     </React.Fragment>
-  )
+  );
 }
 
-export default Home
+export default Home;
