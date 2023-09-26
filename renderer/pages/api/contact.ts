@@ -8,8 +8,6 @@ export default async function createContact(req: NextApiRequest, res: NextApiRes
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  console.log("body server", req.body);
-
   const contactData = JSON.parse(req.body);
 
   const savedContact = await prisma.contact.create({

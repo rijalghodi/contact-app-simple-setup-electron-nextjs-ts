@@ -12,7 +12,6 @@ export async function saveContact(contact: CreateContactDto): Promise<Contact> {
     body: JSON.stringify(contact),
   });
 
-  console.log("response create", response);
   return await response.json();
 }
 
@@ -21,6 +20,5 @@ export async function readContacts(): Promise<Contact[]> {
   const response = await fetch("/api/contacts", {
     method: "GET",
   });
-  console.log("response read", response);
   return response.json();
 }

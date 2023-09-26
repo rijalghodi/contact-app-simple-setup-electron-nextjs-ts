@@ -12,8 +12,8 @@ type Props = {
 export default function HomePage(props: Props) {
   const [contacts, setContacts] = React.useState(props.initialContacts);
 
-  const [newName, setNewName] = React.useState<string | undefined>();
-  const [newEmail, setNewEmail] = React.useState<string | undefined>();
+  const [newName, setNewName] = React.useState<string>("");
+  const [newEmail, setNewEmail] = React.useState<string>("");
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,30 +41,22 @@ export default function HomePage(props: Props) {
             <a>Go to Home</a>
           </Link>
         </p>
-        <form onSubmit={onSubmitHandler}>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Nama"
-            value={newName}
-            onChange={(e) => setNewName(e.target.value)}
-          />
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-            value={newEmail}
-            onChange={(e) => setNewEmail(e.target.value)}
-          />
+
+        <h3>Add New Contact</h3>
+        <form onSubmit={onSubmitHandler} title="New Contact">
+          <input name="name" placeholder="Nama" value={newName} onChange={(e) => setNewName(e.target.value)} />
+          <input name="email" placeholder="Email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
           <button type="submit">Add</button>
         </form>
-        {contacts.map((v) => (
-          <p key={v.id}>
-            {v.name} : {v.email}
-          </p>
-        ))}
+
+        <h3>Contacts</h3>
+        <ul>
+          {contacts.map((v) => (
+            <li key={v.id}>
+              {v.name} : {v.email}
+            </li>
+          ))}
+        </ul>
       </div>
     </React.Fragment>
   );
