@@ -11,7 +11,7 @@ function Home() {
       </Head>
       <div>
         <p>
-          ⚡ Home ⚡ -
+          ⚡ Home ⚡
           <Link href="/">
             <a>Go to Contact Page</a>
           </Link>
